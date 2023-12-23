@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    body {
+        @apply text-xs text-white;
+    }
+    .div-container {
+        @apply container mx-auto max-w-6xl;
+    }
+}
+
+@layer components {
+    .cabecalho {
+        @apply w-screen bg-azul_cs py-3 border border-blue-300;
+    }
+
+    .cabecalho .logo img {
+        @apply h-10;
+    }
+}
