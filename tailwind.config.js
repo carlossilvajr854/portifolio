@@ -3,6 +3,9 @@ module.exports = {
     content: ["./**/*.{html,js}"],
     theme: {
         extend: {
+            backgroundImage: {
+                "home": "url('../src/img/bg-home.jpg')",
+            },
             colors: {
                 azul_cs: {
                     DEFAULT: "#00105d",
