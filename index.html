@@ -4,42 +4,75 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portifólio - Home</title>
+        <link
+            rel="shortcut icon"
+            href="./src/img/favicon.png"
+            type="image/x-icon"
+        />
         <link href="./dist/output.css" rel="stylesheet" />
     </head>
     <body>
         <header class="cabecalho">
-            <div class="div-container flex items-center justify-between">
-                <div class="logo">
-                    <a href="#home">
-                        <img src="./src/img/logo.png" alt="LOGO" />
-                    </a>
-                </div>
-                <div class="menu">
-                    <button>
-                        <svg
-                            data-slot="icon"
-                            fill="none"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                            ></path>
-                        </svg>
-                    </button>
-                </div>
+            <div class="div-container">
+                <a class="logo" href="#home">
+                    <img src="./src/img/logo.png" alt="LOGO" />
+                </a>
+                <button id="btn-menu" class="btn-controle-menu">
+                    <svg
+                        data-slot="icon"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                    </svg>
+                </button>
+                <button id="btn-fecha-menu" class="btn-controle-menu hidden">
+                    <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                    </svg>
+                </button>
             </div>
         </header>
+        <nav class="menu hidden">
+            <ul>
+                <li>
+                    <a class="pagina-atual" href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre-mim">Sobre mim</a>
+                </li>
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
 
         <main>
-            <section class="st-home">
-                Home
-            </section>
+            <section class="st-pagina st-home">Home</section>
+            <section class="st-pagina">Sobre mim</section>
         </main>
 
         <script src="./src/js/index.js"></script>
