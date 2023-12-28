@@ -12,7 +12,12 @@
     }
 
     .st-pagina {
-        @apply w-full h-screen bg-no-repeat bg-cover;
+        @apply w-full bg-no-repeat bg-cover;
+        height: calc(100vh - 3rem);
+    }
+
+    :target {
+        @apply scroll-mt-12;
     }
 }
 
@@ -38,19 +43,23 @@
     }
 
     .cabecalho .btn-controle-menu {
-        @apply outline-0 transition-all duration-300;
+        @apply z-50 outline-0 transition-all duration-300;
+    }
+
+    .cabecalho .btn-controle-menu.fecha-menu-lateral {
+        @apply md:absolute md:top-4 md:right-[19rem] md:z-50;
     }
 
     .cabecalho .btn-controle-menu svg {
         @apply h-9 text-gray-100  hover:scale-110 transition-transform duration-300;
     }
 
-    .cabecalho-retraido .cabecalho .btn-menu svg {
+    .cabecalho-retraido .cabecalho .btn-controle-menu svg {
         @apply scale-75;
     }
 
     .menu {
-        @apply w-full md:w-72 h-full fixed top-16 md:right-0 p-4 z-50 text-gray-400 text-base bg-gray-50 transition-all duration-700;
+        @apply w-full md:w-72 h-full fixed top-16 md:top-0 md:right-0 p-4 z-40 text-gray-400 text-base bg-gray-50 transition-all duration-700;
     }
 
     .cabecalho-retraido .menu {
@@ -70,6 +79,16 @@
     }
 
     .st-home {
-        @apply bg-home;
+        @apply h-screen bg-home;
+    }
+}
+
+@layer utilities {
+    .lightbox {
+        @apply md:w-full h-screen fixed top-16  md:z-[35];
+    }
+
+    .cabecalho-retraido .lightbox {
+        @apply top-12;
     }
 }
