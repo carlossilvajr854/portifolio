@@ -79,7 +79,34 @@
     }
 
     .st-home {
-        @apply h-screen bg-home;
+        @apply h-screen bg-home bg-right-bottom;
+    }
+
+    .conteudo-home {
+        @apply w-full h-full px-8 md:px-4 flex flex-col justify-center;
+    }
+
+    .conteudo-home h1,
+    .conteudo-home h2,
+    .conteudo-home h3 {
+        @apply w-full text-left text-white;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    .conteudo-home h3 {
+        @apply text-base font-normal;
+    }
+
+    .conteudo-home h1 {
+        @apply text-3xl font-semibold;
+    }
+
+    .conteudo-home h2 {
+        @apply text-lg font-normal text-amarelo_cs;
+    }
+
+    .conteudo-home a {
+        @apply w-32 text-center text-base font-medium bg-amarelo_cs text-azul_cs rounded-full mt-3 py-1 hover:bg-amarelo_cs-600 hover:text-azul_cs-600 scale-105 transition-all duration-200 hover:ring-1 hover:ring-amarelo_cs-300 hover:ring-opacity-50;
     }
 }
 
