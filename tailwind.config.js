@@ -4,7 +4,8 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                "home": "url('../src/img/bg-home.jpg')",
+                home: "url('../src/img/bg-home.jpg')",
+                sobre: "url('../src/img/shapes-background-about.png')",
             },
             colors: {
                 azul_cs: {

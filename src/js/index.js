@@ -1,8 +1,13 @@
 const linksMenu = document.querySelectorAll(".menu ul li a");
+const botoesCarouselSobre = document.querySelectorAll(
+    ".botoes-carousel-sobre button"
+);
 
 clickControlesMenu("#btn-menu");
 clickControlesMenu("#btn-fecha-menu");
 clickControlesMenu(".lightbox");
+
+adicionarClasse(".card .conteudo-card div p:first-of-type", "slide-atual");
 
 // Controle do tamanho da barra do header
 window.addEventListener("scroll", () => {
@@ -42,6 +47,27 @@ function controlesMenu() {
         adicionarClasse("#btn-fecha-menu", "fecha-menu-lateral");
     }
 }
+
+// Marca o botão atual do carousel e altera o slide da página Sobre mim
+function marcaCarouselSobre(botao, indice) {
+    botao.classList.add("selecionado");
+    removerClasse(".card .conteudo-card div p.slide-atual", "slide-atual");
+    adicionarClasse(
+        `.card .conteudo-card div p:nth-of-type(${indice + 1})`,
+        "slide-atual"
+    );
+}
+
+// Captura o botão clicado no carousel da página Sobre mim
+botoesCarouselSobre.forEach((botaoClicado, indice) => {
+    botaoClicado.addEventListener("click", () => {
+        removerClasse(
+            ".botoes-carousel-sobre button.selecionado",
+            "selecionado"
+        );
+        marcaCarouselSobre(botaoClicado, indice);
+    });
+});
 
 // Função genérica que dispara as ações de mostrar ou ocultar os controladores do menu
 function clickControlesMenu(controle) {
